@@ -1,10 +1,16 @@
+using System.Collections.Generic;
+
 namespace main
 {
     public class Photo
     {
-        private char orientation {get;set;}
-        private List<string> tags {get;set;}
+        public char orientation {get;set;}
+        public List<string> tags {get;set;}
 
-        public Photo();
+        public Photo(char orientation, List<string> tags) {
+            this.orientation = orientation;
+            this.tags = new List<string>();
+            this.tags.AddRange(tags);
+        }
     }
 }
