@@ -28,6 +28,7 @@ namespace main
                         slide.tagArray.AddRange(mergedTags);
                         slide.indexes = new System.Tuple<int, int>(photo.index, vertical.index);
                         slides.Add(slide);
+                        vertical = null;
                     } else {
                         vertical = photo;
                     }

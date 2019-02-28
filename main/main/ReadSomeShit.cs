@@ -10,7 +10,7 @@ namespace main
     public class ReadSomeShit
     {
         
-        public static Photo[] readFile()
+        public static Photo[] readFile(string filename)
         {
             string filename = "a_example";
             //string filename = "b_lovely_landscapes";
@@ -36,7 +36,7 @@ namespace main
                         List<string> tags = new List<string>();
                         for (int i = 2; i < tagCount + 2; i++)
                             tags.Add(values[i]);
-                        pictures[index++] = new Photo(orientation, tags, index);
+                        pictures[index++] = new Photo(orientation, tags, index - 1);
 
                     }
                     return pictures;

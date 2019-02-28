@@ -12,7 +12,7 @@ namespace main
             this.orientation = orientation;
             this.tags = new List<string>();
             this.tags.AddRange(tags);
-            this.index = index
+            this.index = index;
         }
     }
 }
