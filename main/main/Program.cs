@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace main
 {
@@ -17,7 +18,7 @@ namespace main
                 {
                     
                     // Read the stream to a string, and write the string to the console.
-                    while (line = sr.)
+                    while (line = sr)
                     string line = sr.ReadToEnd();
                     if (line.Split(' ').length < 2) continue;
                    
