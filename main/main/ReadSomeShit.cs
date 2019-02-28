@@ -9,7 +9,8 @@ namespace main
 {
     class ReadSomeShit
     {
-        public static Picture[] readFile()
+        
+        public static Photo[] readFile()
         {
             try
             {   // Open the text file using a stream reader.
@@ -19,7 +20,7 @@ namespace main
                     // Read the stream to a string, and write the string to the console.
                     int index = 0;
                     int n = int.Parse(sr.ReadLine());
-                    Picture[] pictures = new Picture[n];
+                    Photo[] pictures = new Photo[n];
                     Console.WriteLine(n);
                     while ((line = sr.ReadLine()) != null)
                     {
@@ -29,10 +30,10 @@ namespace main
                         List<string> tags = new List<string>();
                         for (int i = 2; i < tagCount + 2; i++)
                             tags.Add(values[i]);
-                        pictures[index++] = new Picture(orientation, tags);
+                        pictures[index++] = new Photo(orientation, tags);
 
                     }
-                    return pictures;
+                    return Photo;
                 }
             }
             catch (IOException e)
@@ -40,7 +41,8 @@ namespace main
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
-            return new Picture[1];
+            //should not happen
+            return new Photo[1];
         }
     }
 }
