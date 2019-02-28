@@ -10,7 +10,12 @@ namespace main
     {
         public List<string> tagArray;
         public int index;
-        public Slide(){}
+
+        public Slide()
+        {
+            tagArray = new List<string>();
+
+        }
        public Slide(List<string> tags,int index)
         {
             tagArray = tags;

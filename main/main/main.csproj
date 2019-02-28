@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IO.cs" />
+    <Compile Include="Photo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadSomeShit.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="ResultCalcUtil.cs" />
+    <Compile Include="Slide.cs" />
+    <Compile Include="SlideBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

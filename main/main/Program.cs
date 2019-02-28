@@ -11,10 +11,10 @@ namespace main
     {
         static void Main(string[] args)
         {
-            ReadSomeShit reader = new ReadSomeShit();
-            List<Photo> photos = ReadSomeShit.readFile("input.txt").ToList();
+            List<Photo> photos = ReadSomeShit.readFile().ToList();
             List<Slide> slides = SlideBuilder.createSlides(photos);
-            int a = 0;
+            Console.WriteLine(" >> exit");
+            Console.ReadKey();
         }
     }
 }
