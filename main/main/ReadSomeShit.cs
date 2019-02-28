@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace main
+{
+    class ReadSomeShit
+    {
+        public static Picture[] readFile()
+        {
+            try
+            {   // Open the text file using a stream reader.
+                using (StreamReader sr = new StreamReader("input.txt"))
+                {
+                    string line;
+                    // Read the stream to a string, and write the string to the console.
+                    int index = 0;
+                    int n = int.Parse(sr.ReadLine());
+                    Picture[] pictures = new Picture[n];
+                    Console.WriteLine(n);
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] values = line.Split();
+                        char orientation = Char.Parse(values[0]);
+                        int tagCount = int.Parse(values[1]);
+                        List<string> tags = new List<string>();
+                        for (int i = 2; i < tagCount + 2; i++)
+                            tags.Add(values[i]);
+                        pictures[index++] = new Picture(orientation, tags);
+
+                    }
+                    return pictures;
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+            return new Picture[1];
+        }
+    }
+}
