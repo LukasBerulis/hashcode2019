@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace main
 {
-    class ReadFile
+    static class IO
     {
+        public static List<Slide> ReadFile(string filename)
+        {
+            return null;
+        }
     }
 }
