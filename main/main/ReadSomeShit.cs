@@ -12,9 +12,15 @@ namespace main
         
         public static Photo[] readFile()
         {
+            string filename = "a_example";
+            //string filename = "b_lovely_landscapes";
+            //string filename = "c_memorable_moments";
+           // string filename = "d_pet_pictures";
+           // string filename = "e_shiny_selfies";
+ 
             try
             {   // Open the text file using a stream reader.
-                using (StreamReader sr = new StreamReader("in/a_example.txt"))
+                using (StreamReader sr = new StreamReader(filename))
                 {
                     string line;
                     // Read the stream to a string, and write the string to the console.
