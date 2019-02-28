@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace main
 {
-    class Slide
+    public class Slide
     {
-        List<string> tagArray;
-        int index;
-
-        public Slide(List<string> tags,int index)
+        public List<string> tagArray;
+        public int index;
+        public Slide(){}
+       public Slide(List<string> tags,int index)
         {
             tagArray = tags;
             this.index = index;

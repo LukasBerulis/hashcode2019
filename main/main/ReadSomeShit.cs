@@ -33,7 +33,7 @@ namespace main
                         pictures[index++] = new Photo(orientation, tags);
 
                     }
-                    return Photo;
+                    return pictures;
                 }
             }
             catch (IOException e)
