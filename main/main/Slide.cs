@@ -9,17 +9,16 @@ namespace main
     public class Slide
     {
         public List<string> tagArray;
-        public int index;
-
+        public Tuple<int, int> indexes;// if -1 doesn't exist
         public Slide()
         {
             tagArray = new List<string>();
 
         }
-       public Slide(List<string> tags,int index)
+       public Slide(List<string> tags, Tuple<int, int> indexes)
         {
             tagArray = tags;
-            this.index = index;
+            this.indexes = indexes;
         }
         
         public override int GetHashCode()

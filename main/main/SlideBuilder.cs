@@ -4,7 +4,7 @@ namespace main
 {
     public class SlideBuilder
     {
-        public static List<Slide> createSlides(List<Photo> photos)
+        public static List<Slide> createSlides(Photo[] photos)
         {
             List<Slide> slides = new List<Slide>();
             Photo vertical = null;
@@ -12,6 +12,7 @@ namespace main
                 if (photo.orientation == 'H') {
                     Slide slide = new Slide();
                     slide.tagArray = photo.tags;
+                    slide.indexes = new System.Tuple<int, int>(photo.index, -1);
                     slides.Add(slide);
                 } else {
                     if (vertical != null) {
@@ -25,17 +26,19 @@ namespace main
                             mergedTags.Add(tag);
                         }
                         slide.tagArray.AddRange(mergedTags);
+                        slide.indexes = new System.Tuple<int, int>(photo.index, vertical.index);
                         slides.Add(slide);
                     } else {
                         vertical = photo;
                     }
                 }
             }
-             if (vertical != null) {
-                Slide slide = new Slide();
-                slide.tagArray = vertical.tags;
-                slides.Add(slide);
-            }
+            // if (vertical != null) {
+            //    Slide slide = new Slide();
+            //    slide.indexes = new System.Tuple<int, int>(vertical.index, -1);
+            //    slide.tagArray = vertical.tags;
+            //    slides.Add(slide);
+            //}
 
             return slides;
         }

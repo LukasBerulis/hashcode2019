@@ -11,9 +11,9 @@ namespace main
     {
         static void Main(string[] args)
         {
-            List<Photo> photos = ReadSomeShit.readFile().ToList();
-            List<Slide> slides = SlideBuilder.createSlides(photos);
-            Console.WriteLine(" >> exit");
+            var photos = ReadSomeShit.readFile();
+            var slides = SlideBuilder.createSlides(photos);
+
             Console.ReadKey();
         }
     }
