@@ -8,7 +8,7 @@ namespace main
 {
     class Slide
     {
-        List<string> tagArray;
+        public List<string> tagArray;
         int index;
 
         public Slide(List<string> tags,int index)
