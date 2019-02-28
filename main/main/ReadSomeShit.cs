@@ -30,7 +30,7 @@ namespace main
                         List<string> tags = new List<string>();
                         for (int i = 2; i < tagCount + 2; i++)
                             tags.Add(values[i]);
-                        pictures[index++] = new Photo(orientation, tags);
+                        pictures[index++] = new Photo(orientation, tags, index);
 
                     }
                     return pictures;
