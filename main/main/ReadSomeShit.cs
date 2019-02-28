@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace main
 {
-    class ReadSomeShit
+    public class ReadSomeShit
     {
         
         public static Photo[] readFile()

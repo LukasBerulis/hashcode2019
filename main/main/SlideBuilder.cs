@@ -4,7 +4,7 @@ namespace main
 {
     public class SlideBuilder
     {
-        public List<Slide> createSlides(List<Photo> photos)
+        public static List<Slide> createSlides(List<Photo> photos)
         {
             List<Slide> slides = new List<Slide>();
             Photo vertical = null;
