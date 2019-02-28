@@ -15,44 +15,17 @@ namespace main
             int factor3 = GetDifferentTags(tags2, tags1);
             int min = Math.Min(factor1, factor2);
             min = Math.Min(min, factor3);
-
             return min;
         }
 
         public static int GetCommonTags(ICollection<string> tags1, ICollection<string> tags2)
         {
-            int sum = 0;
-
-            foreach (string tag1 in tags1)
-            {
-                foreach (string tag2 in tags2)
-                {
-                    if (tag1 == tag2)
-                    {
-                        sum++;
-                    }
-                }
-            }
-
-            return sum;
+            return tags1.Intersect(tags2).Count();
         }
 
         public static int GetDifferentTags(ICollection<string> tags1, ICollection<string> tags2)
         {
-            int sum = 0;
-
-            foreach (string tag1 in tags1)
-            {
-                foreach (string tag2 in tags2)
-                {
-                    if (tag1 != tag2)
-                    {
-                        sum++;
-                    }
-                }
-            }
-
-            return sum;
+            return tags1.Except(tags2).Count();
         }
     }
 }
